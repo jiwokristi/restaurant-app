@@ -1,0 +1,146 @@
+.form {
+  padding: 1rem;
+  overflow: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.control input {
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.control span {
+  text-align: right;
+  color: #ca3e51;
+  font-size: 0.8rem;
+}
+
+.control input:focus {
+  outline: none;
+  border-color: #b94517;
+  box-shadow: 0 1px 18px 10px rgba(223, 211, 200, 0.25);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 16px 0;
+}
+
+.actions button {
+  font: inherit;
+  color: #5a1a01;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  border: 1px solid #8a2b06;
+}
+
+.actions button:hover {
+  outline: none;
+  background-color: #641e03;
+  border-color: #b94517;
+  color: white;
+}
+
+.actions button:active,
+.actions button:focus {
+  outline: none;
+  box-shadow: 0 1px 18px 10px rgba(189, 174, 161, 0.25);
+  background-color: #641e03;
+  border-color: #b94517;
+  color: white;
+}
+
+.actions .submit {
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+}
+
+.actions .disabled,
+.actions .disabled button:hover {
+  background-color: #8a2b06;
+  border: none;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.actions .submit:hover,
+.actions .submit:active {
+  background-color: #641e03;
+}
+
+.invalid label {
+  color: #ca3e51;
+}
+
+.invalid input {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+}
+
+@media (max-width: 550px) {
+  .row {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .actions button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+  }
+  .control {
+    margin-bottom: 0;
+  }
+  .control label,
+  .control input {
+    font-size: 0.75rem;
+  }
+  .control span {
+    font-size: 0.7rem;
+  }
+  .form {
+    max-height: 16.2rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #8a2b06;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .control {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,61 @@
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.input input:focus {
+  outline: none;
+  border-color: #b94517;
+  box-shadow: 0 1px 18px 10px rgba(189, 174, 161, 0.25);
+}
+
+.input label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.input input {
+  width: 3.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font: inherit;
+  padding-left: 0.3rem;
+}
+
+.input input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: #8a2b06 url(/src/assets/expand-up-down-fill.svg) no-repeat center
+    center;
+  width: 1rem;
+  border-left: 1px solid #8a2b06;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+.input input[type="number"]::-webkit-inner-spin-button:hover {
+  box-shadow: 0 1px 18px 10px rgba(189, 174, 161, 0.25);
+  opacity: 0.8;
+}
+
+.input input[type="number"]::-webkit-inner-spin-button:active {
+  box-shadow: 0 1px 18px 10px rgba(189, 174, 161, 0.25);
+  opacity: 1;
+}
+
+.input input:-webkit-autofill {
+  background: #8a2b06;
+  color: white;
+}
+
+@media (max-width: 550px) {
+  .input label {
+    font-size: 0.75rem;
+  }
+  .input input {
+    width: 3.25rem;
+    padding-left: 0.15rem;
+    font-size: 0.75rem;
+  }
+}

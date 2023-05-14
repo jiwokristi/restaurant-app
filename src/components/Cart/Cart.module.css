@@ -1,0 +1,119 @@
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 13rem;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #8a2b06;
+    border-radius: 10px;
+  }
+}
+
+.success-icon {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin: 1rem;
+}
+
+.success-message {
+  margin-top: 32px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.actions {
+  text-align: right;
+  padding: 1rem;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.actions button:hover {
+  outline: none;
+  background-color: #641e03;
+  border-color: #b94517;
+  color: white;
+}
+
+.actions button:active,
+.actions button:focus {
+  outline: none;
+  box-shadow: 0 1px 18px 10px rgba(189, 174, 161, 0.25);
+  background-color: #641e03;
+  border-color: #b94517;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #8a2b06;
+}
+
+.actions .button {
+  background-color: #8a2b06;
+  color: white;
+}
+
+@media (max-width: 550px) {
+  .total {
+    font-size: 1.25rem;
+  }
+  .actions button {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.75rem;
+  }
+  .cart-items {
+    max-height: 11rem;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+  }
+  .success-message {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .total {
+    font-size: 1.15rem;
+  }
+  .actions button {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.75rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .cart-items {
+    max-height: 11rem;
+  }
+}
